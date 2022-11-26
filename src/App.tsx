@@ -9,19 +9,13 @@ function App() {
         {message: 'message2'},
         {message: 'message3'},
     ])
-
+    console.log('app')
     const addMessage = (title: string) => {
-        let newMessage = {massage: 'messageNew'};
-        console.log(title)
-
+        let newMessage = {message: 'messageNew'};
+        setMessage([newMessage,...message])
     }
     return (
         <div>
-            {/*<div>*/}
-            {/*    <input/>*/}
-            {/*    <button>+</button>*/}
-            {/*</div>*/}
-
             <FullInput addMessage={addMessage}/>
             {message.map((el, index) => {
                 return (
