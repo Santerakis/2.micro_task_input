@@ -12,7 +12,6 @@ function App() {
         {message: 'message3'},
     ])
     let [title, setTitle] = useState('')
-    console.log(title)
 
     const addMessage = (title: string) => {
         let newMessage = {message: title};
@@ -25,7 +24,7 @@ function App() {
     return (
         <div>
             {/*<FullInput addMessage={addMessage}/>*/}
-            <Input setTitle={setTitle} title={title}/>
+            <Input setTitle={setTitle} title={title} callBack={callBackButtonHandler}/>
             <Button name={'+'} callBack={callBackButtonHandler}/>
 
             {message.map((el, index) => {
